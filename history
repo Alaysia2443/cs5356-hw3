@@ -1,11 +1,3 @@
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-ssh -T git@github.com
-cat ~/.ssh/id_ed25519.pub
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-git remote -v
-git remote set-url origin git@github.com:alaysia2443/cs5356-hw3.git
 git push origin main
 git add index.html
 git commit -m "Added index.html"
@@ -13,3 +5,9 @@ git push origin main
 git remote set-url origin git@github.com:Alaysia2443/cs5356-hw3.git
 git remote -v
 https://alaysia2443.github.io/cs5356-hw3/
+git add .
+git add index.html
+git commit -m "index.html udpated with image"
+git push origin main
+touch styles.css
+
