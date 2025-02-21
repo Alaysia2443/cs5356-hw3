@@ -14,8 +14,7 @@ body {
     "header"
     "main-content"
     "footer";
-    height: 500vh;
-    grid-gap: 2em;
+    grid-gap: 1em;
     margin:2em;
     padding: 2em;
     line-height: 1;
@@ -24,33 +23,33 @@ body {
     color: #F2EDD7;
     font-style: bold;
     text-align: center;
-    padding: 3em;
-    border: 10px solid #eacba0;
-    border-radius: 15px;
-    padding: 2em;
+    min-height: 100vh;
+
+
 
 }
 
 header {
-    font-size: 50px;
+    font-size: 55px;
     grid-area: header;
     color: #F2EDD7;
     font-style: bold;
     text-align: center;
-    padding: 3em;
+    padding: 1.5em;
     border: 10px solid #b78f4658;
     border-radius: 15px;
-    padding: 2em;
-    background-color:#755139 ; 
+    background-color:#755139; 
 
 }
 
 main {
     grid-area: main-content;
-    display: flex;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    display: grid;
     flex-flow: column;
-    gap: 1.5rem;
-    line-height: 1;
+    line-height: 1.2;
     overflow-y: auto;
     text-align: center;
     font-weight: 300;
@@ -63,26 +62,16 @@ main {
 main img {
     width: 300px;
     height: auto;
-    display: block;
-    margin: 0 auto;
+    margin: 5;
     box-shadow: 4px 4px 15px rgb(33, 32, 32);
     border-radius: 10px;
-    transform: rotate(2deg);
 }
     
 
-main p{
+.right p{
     font-size: 30px;
     color: #201c19;
-    background-color: #F2EDD7;
-    padding: 1em 2em;
-    border-radius: 10px;
-    padding: 1em;
-    line-height: 1.5;
-    background-color: #F2EDD7;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    width: 80%;
+
 
 }
 
