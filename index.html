@@ -1,3 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Welcome to My Personal Website</title>
+<head> 
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Papyrus;
+        background-color: #F2EDD7;
+        color: #755139;
+        display: grid;
+        grid-template-areas:
+          "header"
+          "intro"
+          "other-content"
+          "footer";
+        grid-gap: 1em;
+        min-height: 100vh;
+        width: auto;
+        margin: 2em;
+        padding: 2em;
+        border: 10px solid #b78f4658;
+        border-radius: 15px;
+        background-color: #F2EDD7;
+        border-radius: 20px;
+    
+    }
+    
+    header {
+        font-size: 55px;
+        grid-area: header;
+        color: #F2EDD7;
+        font-style: bold;
+        text-align: center;
+        border: 10px solid #b1a88033;
+        border-radius: 15px;
+        background-color: #755139;
+    }
+    
+    .intro {
+        grid-area: intro;
+        display: grid;
+        gap: 1.5rem;
+        align-items: start;
+        background-color: #F2EDD7;
+        border-radius: 20px;
 
+    }
+    
+    .name {
+        text-align: center;
+        color: #755139;
+        font-size: 35px;
+        padding: 1rem;
+        font-weight: bold;
+        border-radius: 10px 100px / 120px;
+        border: 10px solid #755139;
+        background-image: url(images/picture2.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    
+    .name img {
+        width: 300px;
+        height: auto;
+        box-shadow: 4px 4px 15px rgb(33, 32, 32);
+        border-radius: 10px;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    .about-me {
+        line-height: 1.5;
+        font-size: 20px;
+        color: #755139;
+        text-align: center;
+       
+    
+    }
+    
+    .about-me p {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .about-me img {
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        margin: 20px auto;
+        display: block;
+        box-shadow: 4px 4px 15px rgb(33, 32, 32);
+        border: 10px solid #F2EDD7;
+    }
+    
+    .other-content {
+        grid-area: other-content;
+        text-align: center;
+        border-radius: 20px;
+        line-height: 1.5;
+        font-size: px;
+        color: #755139;
+    }
+
+    .about-me video  {
+        display: block;
+        padding: 1rem;
+        width: 35%;
+        margin: 0 auto;
+    }
+
+
+    footer {
+        grid-area: footer;
+        background: #F2EDD7;
+        padding: 1rem;
+        border-radius: 20px;
+        text-align: center;
+    }
+    
+    header,
+    footer,
+   .intro {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    hr {
+        border: none;
+        border-top: 10px solid #755139;
+        width: 80%;
+        margin: 2em auto;
+    }
+    
+    .
+    @media (min-width: 512px) {
+        body {
+            grid-template-columns: minmax(auto, 1fr) 2fr;
+            grid-template-rows: min-content 1fr min-content;
+            grid-template-areas:
+              "header header"
+              "intro intro"
+              "other-content other-content"
+              "footer footer";
+        }
+    }
+</style>
+</head>
+<body>
+    <header>Welcome to My Personal Homepage</header>
+    <section class="intro">
+        <article class="name">
+            <h1>Hi! I'm Alaysia</h1>
+            <img src="images/picture.jpg">
+            <h2>(a-lay-jah)</h2>
+        </article>
+        <article class="about-me">
+            <hr><hr>
+            <h3>I am exploring the art of design and creativity. This website is an experimental canvas and reflects my start in designing a website. It is a glimpse into my process of building a personal online space.</h3>
+            <video controls width="300">
+                <source src="images/video.mp4" type="video/mp4" />
+            </video>
+            <p>I love to travel. This website theme is based on my study abroad trip to Abu Dhabi.</p>
+            <hr>   
+            <hr>
+    </section>
+    <section class="other-content">
+        <p>hello</p>
+    </section>
+    <footer></footer>
+</body>
+</html>
 
 
