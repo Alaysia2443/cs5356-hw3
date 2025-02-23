@@ -1,0 +1,23 @@
+git push origin main
+git add index.html
+git commit -m "Added index.html"
+git push origin main
+git remote set-url origin git@github.com:Alaysia2443/cs5356-hw3.git
+git remote -v
+https://alaysia2443.github.io/cs5356-hw3/
+git add .
+git add index.html
+git commit -m "index.html udpated with image"
+git push origin main
+touch styles.css
+
+python -m SimpleHTTPServer 8000
+python -m http.server 8000
+python3 -m http.server 8000
+git add . 
+git push main origin 
+git status 
+git add .
+git commit -m "First experiment with layout"
+git push orign main
+git push origin main
