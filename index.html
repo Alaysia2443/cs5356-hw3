@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
     <title>Welcome to My Personal Website</title>
 <head> 
+    <meta charset="UTF-8">
+    <meta section1="viewport" content="width=device-width, initial-scale=1">
 <style>
     * {
         box-sizing: border-box;
@@ -41,6 +42,7 @@
         border: 10px solid #b1a88033;
         border-radius: 15px;
         background-color: #755139;
+
     }
     
     .intro {
@@ -53,7 +55,7 @@
 
     }
     
-    .name {
+    .section1 {
         text-align: center;
         color: #755139;
         font-size: 35px;
@@ -66,18 +68,25 @@
         background-repeat: no-repeat;
         background-size: cover;
 
+
+    }
+
+    .section1 h2 {
+        font-size: 30px;
     }
     
-    .name img {
+    .section1 img {
         width: 300px;
         height: auto;
-        box-shadow: 4px 4px 15px rgb(33, 32, 32);
-        border-radius: 10px;
+        box-shadow: 10px 20px 4px #755139;
         margin: 20px auto;
         display: block;
+        border-radius: 20%
+       
     }
     
-    .about-me {
+
+    .section2 {
         line-height: 1.5;
         font-size: 20px;
         color: #755139;
@@ -85,36 +94,50 @@
        
     
     }
+
+    .section2 h3 {
+        padding:1rem;
     
-    .about-me p {
-        font-size: 25px;
-        font-weight: bold;
     }
-    
-    .about-me img {
-        width: 300px;
-        height: 200px;
-        border-radius: 10px;
-        margin: 20px auto;
+
+    .section2 video  {
         display: block;
-        box-shadow: 4px 4px 15px rgb(33, 32, 32);
-        border: 10px solid #F2EDD7;
+        padding: 2rem;
+        width: 35%;
+        border-radius: 2em;
+        margin: 0 auto;
+
+        
     }
+
+    
+    .section2 h4{
+        font-size: 22px;
+        font-weight: bold;
+        border: 5px solid #755139;
+        padding: 1rem;
+    
+
+    }
+    
+    .other-content p {
+        font-size: 15px;
+        font-weight: bold;
+        border: 5px solid #755139;
+        padding: 1rem;
+        margin-bottom: 30px;
+       
+
+    }
+    
     
     .other-content {
         grid-area: other-content;
         text-align: center;
-        border-radius: 20px;
         line-height: 1.5;
         font-size: px;
         color: #755139;
-    }
-
-    .about-me video  {
-        display: block;
-        padding: 1rem;
-        width: 35%;
-        margin: 0 auto;
+        margin: 50px, 50px;
     }
 
 
@@ -134,13 +157,46 @@
     }
 
     hr {
-        border: none;
-        border-top: 10px solid #755139;
-        width: 80%;
-        margin: 2em auto;
+
+        border: 3px dashed #755139;
+
+    }
+
+    #quote-container{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: #755139;
+        margin: 20px 10px;
+        min-height: 5rem;
+        
+    }
+
+    #quote-text {
+        line-height: 1.5;
+        color: #F2EDD7;
+        font-size: 25px;
+    
     }
     
-    .
+    
+    button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    }
+
+    .error {
+    color: #e74c3c;
+    padding: 1rem;
+    border-left: 4px solid currentColor;
+    background-color: #fdf1f0;
+    }
+
+    .loading {
+    opacity: 0.5;
+    font-style: italic;
+    }
+    
+    
     @media (min-width: 512px) {
         body {
             grid-template-columns: minmax(auto, 1fr) 2fr;
@@ -157,26 +213,64 @@
 <body>
     <header>Welcome to My Personal Homepage</header>
     <section class="intro">
-        <article class="name">
-            <h1>Hi! I'm Alaysia</h1>
-            <img src="images/picture.jpg">
+        <article class="section1">
+            <h1>Hi! I'm Alaysia</article>h1>
             <h2>(a-lay-jah)</h2>
+            <img src="images/picture.jpg">
         </article>
-        <article class="about-me">
+        <article class="section2">
             <hr><hr>
-            <h3>I am exploring the art of design and creativity. This website is an experimental canvas and reflects my start in designing a website. It is a glimpse into my process of building a personal online space.</h3>
-            <video controls width="300">
-                <source src="images/video.mp4" type="video/mp4" />
-            </video>
-            <p>I love to travel. This website theme is based on my study abroad trip to Abu Dhabi.</p>
-            <hr>   
-            <hr>
-    </section>
+            <h3>I am exploring the art of design and creativity. This website is an experimental canvas and reflects my start in designing a website. It is a glimpse into my process of building a personal online space. The website's theme is inspired by my love for traveling and specifically my time studying abroad in Abu Dhabi and Dubai.</h3>
+            <div id="quote-container">
+                <p id="quote-text">Click fetch to display a random advice quote</p>
+              </div>
+            <button id="fetch-button" class="button">Fetch!</button>
+            <hr><hr>
+            <video controls>
+                <source src="images/video.mp4" type="video/mp4" />  
+                </video>
+                <hr><hr>
+        </section>
     <section class="other-content">
-        <p>hello</p>
+        <p>For my homework, I experimented with a CSS property, the box-shadow property, and the video element in HTML. I added a box shadow to my photo to make it stand out against the background. This property allowed my image to appear to float above the background. I learned that I can tweak the values in the property, including the horizontal and vertical offset, blur, and color, to create the desired shadow effect. I also included a video element on my site to feature a video from my trip to Dubai. The video tag has controls and can be styled using CSS. Using this element helped me understand one of the limitations of HTML. HTML, or at least the version in my Visual Studio code, does not accept MOV video types. This required me to find a solution by converting the video to MP4 and using type="video/mp4." Overall, it was interesting to see how easily I could integrate a video into my website and make an image in the background stand out. These two features added a new dimension to the layout and visuals of my design. </p> 
+
+
     </section>
-    <footer></footer>
+    <footer>Thanks for visiting!</footer>
 </body>
 </html>
+<script>
+// This section is adapted from Professor Schubert's example from CodePen
+const quoteText = document.getElementById("quote-text");
+const fetchButton = document.getElementById("fetch-button");
+
+async function fetchQuote() {
+  fetchButton.disabled = true;
+  quoteText.textContent = "Fetching new advice...";
+  quoteText.classList.add("loading");
+
+  try {
+    const response = await fetch("https://api.adviceslip.com/advice");
+    const data = await response.json();
+    const quote = data.slip.advice;
+    quoteText.textContent = quote;
+    quoteText.classList.remove("loading");
+    quoteText.classList.remove("error");
+  } catch (error) {
+    console.error("Error fetching advice:", error);
+    quoteText.textContent = "Failed to fetch advice. Please try again.";
+    quoteText.classList.remove("loading");
+    quoteText.classList.add("error");
+  } finally {
+    fetchButton.disabled = false;
+  }
+}
+
+fetchButton.addEventListener("click", fetchQuote);
+
+
+</script>
+
+
 
 
